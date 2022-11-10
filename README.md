@@ -20,6 +20,28 @@ Additional components should be placed in `client/components`.
 
 ---
 
+## Running the database 
+
+Creating a migration 
+```cd
+npm run knex migrate:make <table-name>
+```
+
+Creating a seed
+```cd
+npm run knex seed:make <table-name>
+```
+
+Initialising a table
+```cd
+npm run knex migrate:latest
+```
+
+Running Seeds
+```cd
+npm run knex seed:run
+```
+
 ## Separate client/server
 
 The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
