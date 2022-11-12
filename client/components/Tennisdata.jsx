@@ -12,9 +12,7 @@ function Data() {
     getTennisData()
       .then((res) => {
        
-
         setActivities(res)
-
         console.log(res)
 
       })

@@ -4,8 +4,9 @@ export function getGreeting() {
   return request.get('/greeting').then((res) => res.body.greeting)
 }
 
+
 export function getTennisData() {
   return request
-    .get('https://rapidapi.com/api/tennis/search/nadal')
+    .get('https://rapidapi.com/BettingAPI/api/tennis-odds/details')
     .then((res) => res.body.activity)
 }
