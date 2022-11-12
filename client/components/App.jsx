@@ -3,6 +3,7 @@ import { getGreeting } from '../apiClient'
 
 import Header from "./Header";
 import Footer from "./Footer";
+import Data from "./Tennisdata";
 
 const App = () => {
   const [greeting, setGreeting] = useState('')
@@ -27,14 +28,10 @@ const App = () => {
 
       <Header />
 
-      {count}
-      <h1>{greeting}</h1>
-      {isError && (
-        <p style={{ color: 'red' }}>
-          There was an error retrieving the greeting.
-        </p>
-      )}
-      <button onClick={() => setCount(count + 1)}>Click</button>
+
+      <Data />
+
+      <p>hello</p>
 
 
       <Footer />
