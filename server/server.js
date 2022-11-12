@@ -11,7 +11,6 @@ server.use(cors('*'))
 server.get('/greeting', (req, res) => {
   const greetings = ['hola', 'hi', 'hello', 'howdy']
   let index = Math.floor(Math.random() * greetings.length)
-  console.log(index)
   res.json({ greeting: greetings[index] })
 })
 

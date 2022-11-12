@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getGreeting } from '../apiClient'
 
+import Header from "./Header";
+import Footer from "./Footer";
+
 const App = () => {
   const [greeting, setGreeting] = useState('')
   const [count, setCount] = useState(0)
@@ -21,6 +24,9 @@ const App = () => {
 
   return (
     <>
+
+      <Header />
+
       {count}
       <h1>{greeting}</h1>
       {isError && (
@@ -29,6 +35,10 @@ const App = () => {
         </p>
       )}
       <button onClick={() => setCount(count + 1)}>Click</button>
+
+
+      <Footer />
+
     </>
   )
 }
