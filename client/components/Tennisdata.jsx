@@ -11,7 +11,8 @@ function Data() {
 
     getTennisData()
       .then((res) => {
-       
+        console.log(res);
+
         setActivities(res)
         console.log(res)
 
@@ -24,7 +25,7 @@ function Data() {
   return (
 
     <>
-      <h2>{activities}</h2>
+      <h2>{JSON.stringify(activities)}</h2>
 
     </>
 
