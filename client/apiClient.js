@@ -15,7 +15,7 @@ const options = {
 };
 
 export function getTennisData() {
-  return fetch('https://tennisapi1.p.rapidapi.com/api/tennis/search/nadal', options)
+  return get('/api/v1/movies'
     .then((res) => res.json())
     .catch((err) => console.error(err)) 
   }
