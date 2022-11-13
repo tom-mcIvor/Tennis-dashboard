@@ -18,7 +18,7 @@ function Data() {
         console.log(res);
 
         console.log(res.results[0].entity.country.name);
-
+        
         console.log(res.results[0].entity.country.name);
 
         b = res.results[0].entity.country.name
@@ -40,6 +40,11 @@ function Data() {
 
     <>
 
+      <h1>
+        <p>
+          {b}
+        </p>
+      </h1>
 
       <h2>{a}</h2>
 
@@ -51,4 +56,3 @@ function Data() {
 
 export default Data
 
-gioiertnoeirntg
