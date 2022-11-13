@@ -20,7 +20,7 @@ function Data() {
         b = res.results[0].entity.country.name
         console.log(b);
 
-        setActivities(res)
+        setActivities(b)
 
       })
       .catch((err) => {
