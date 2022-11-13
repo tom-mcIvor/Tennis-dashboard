@@ -6,13 +6,10 @@ function Data() {
 
 
   const [activities, setActivities] = useState(null)
-  const [aactivities, ssetActivities] = useState(null)
-  const [aaactivities, sssetActivities] = useState(null)
 
 
 
   let b
-  let c
 
   useEffect(() => {
 
@@ -21,20 +18,14 @@ function Data() {
         console.log(res);
 
         console.log(res.results[0].entity.country.name);
-
-
-        console.log(res.results[0].entity.slug);
-
-        c = res.results[0].entity.slug
+        
+        
+        console.log(res.results[0].entity.country.name);
 
         b = res.results[0].entity.country.name
         console.log(b);
 
-
         setActivities(b)
-        ssetActivities(c)
-        sssetActivities(c)
-
 
       })
       .catch((err) => {
@@ -43,14 +34,11 @@ function Data() {
   }, [])
 
 
-
-
+  const a = activities
 
   return (
 
     <>
-
-
 
 
       <h2>Top 100 players</h2>
@@ -70,24 +58,11 @@ function Data() {
 
       <h1>
         <p>
-          {aaactivities}
-        </p>
-      </h1>
-
-
-      <h1>
-        <p>
           {b}
         </p>
       </h1>
 
-      <h1>
-        <p>
-          {aactivities}
-        </p>
-      </h1>
-
-      <h2>{activities}</h2>
+      <h2>{a}</h2>
 
     </>
 

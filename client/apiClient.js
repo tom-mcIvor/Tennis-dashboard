@@ -15,7 +15,7 @@ const options = {
 };
 
 export function getTennisData() {
-  return fetch('https://tennisapi1.p.rapidapi.com/api/tennis/player/14486', options)
+  return fetch('https://tennisapi1.p.rapidapi.com/api/tennis/search/murray', options)
     .then((res) => res.json())
     .catch((err) => console.error(err)) 
   }
