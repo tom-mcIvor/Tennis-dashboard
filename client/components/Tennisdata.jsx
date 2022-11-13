@@ -7,7 +7,7 @@ function Data() {
 
   const [activities, setActivities] = useState(null)
 
-  let b 
+  let b
 
   useEffect(() => {
 
@@ -27,13 +27,15 @@ function Data() {
       })
   }, [])
 
+  console.log(b);
+
   const a = JSON.stringify(activities)
 
   return (
 
     <>
 
-    <h1>{b}</h1>
+      <h1><p>{b}</p></h1>
 
       <h2>{a}</h2>
 
@@ -45,4 +47,3 @@ function Data() {
 
 export default Data
 
-fdsgfsgsfgsf
