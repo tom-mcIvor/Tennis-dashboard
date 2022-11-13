@@ -15,10 +15,10 @@ const options = {
 };
 
 export function getTennisData() {
-  return fetch('https://tennisapi1.p.rapidapi.com/api/tennis/search/nadal', options)
+  return fetch('https://tennisapi1.p.rapidapi.com/api/tennis/player/14486', options)
     .then((res) => res.json())
-    .catch((err) => console.error(err)) // I would personally handle this error in the component, so that we can show the user something useful if the fetch fails, like, "Hey User! I couldn't fetch this for you."
-}
+    .catch((err) => console.error(err)) 
+  }
 
 
 // export function getTennisData() {

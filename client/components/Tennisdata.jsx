@@ -50,13 +50,31 @@ function Data() {
 
     <>
 
+
+
+
+      <h2>Top 100 players</h2>
+
+      <label htmlFor="cars">Choose a player : </label>
+
+      <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+
+        
+
+
+
       <h1>
         <p>
           {aaactivities}
         </p>
       </h1>
 
-      
+
       <h1>
         <p>
           {b}
