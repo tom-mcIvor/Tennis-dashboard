@@ -7,6 +7,8 @@ function Data() {
 
   const [activities, setActivities] = useState(null)
 
+  let b 
+
   useEffect(() => {
 
     getTennisData()
@@ -14,6 +16,8 @@ function Data() {
         console.log(res);
 
         console.log(res.results[0].entity.country.name);
+
+        b = res.results[0].entity.country.name
 
         setActivities(res)
 
@@ -29,7 +33,7 @@ function Data() {
 
     <>
 
-
+    <h1>{b}</h1>
 
       <h2>{a}</h2>
 
