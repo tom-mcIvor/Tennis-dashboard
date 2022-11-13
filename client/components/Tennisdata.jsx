@@ -18,6 +18,7 @@ function Data() {
         console.log(res.results[0].entity.country.name);
 
         b = res.results[0].entity.country.name
+        console.log(b);
 
         setActivities(res)
 
@@ -35,7 +36,11 @@ function Data() {
 
     <>
 
-      <h1><p>{b}</p></h1>
+      <h1>
+        <p>
+          {b}
+        </p>
+      </h1>
 
       <h2>{a}</h2>
 
