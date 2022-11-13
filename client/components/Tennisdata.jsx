@@ -7,6 +7,8 @@ function Data() {
 
   const [activities, setActivities] = useState(null)
 
+
+
   let b
 
   useEffect(() => {
@@ -16,10 +18,12 @@ function Data() {
         console.log(res);
 
         console.log(res.results[0].entity.country.name);
+        
+        console.log(res.results[0].entity.country.name);
 
         b = res.results[0].entity.country.name
 
-        setActivities(res)
+        setActivities(b)
 
       })
       .catch((err) => {
@@ -29,13 +33,12 @@ function Data() {
 
   console.log(b);
 
-  const a = JSON.stringify(activities)
+  const a = activities
 
   return (
 
     <>
 
-      <h1><p>{b}</p></h1>
 
       <h2>{a}</h2>
 

@@ -27,4 +27,3 @@ export function getTennisData() {
 //     .then((res) => res.body.activity)
 // }
 
-
