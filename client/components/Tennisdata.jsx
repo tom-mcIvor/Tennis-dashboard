@@ -18,10 +18,11 @@ function Data() {
         console.log(res);
 
         console.log(res.results[0].entity.country.name);
-        
+
         console.log(res.results[0].entity.country.name);
 
         b = res.results[0].entity.country.name
+        console.log(b);
 
         setActivities(b)
 
