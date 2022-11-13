@@ -19,7 +19,6 @@ function Data() {
 
         console.log(res.results[0].entity.country.name);
         
-        
         console.log(res.results[0].entity.country.name);
 
         b = res.results[0].entity.country.name
@@ -40,27 +39,14 @@ function Data() {
 
     <>
 
-
-      <h2>Top 100 players</h2>
-
-      <label htmlFor="cars">Choose a player : </label>
-
-      <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
-
-        
-
-
-
+<<<<<<< HEAD
+=======
       <h1>
         <p>
           {b}
         </p>
       </h1>
+>>>>>>> fc4b43658b97503ab161e02d331ccae89b100fad
 
       <h2>{a}</h2>
 

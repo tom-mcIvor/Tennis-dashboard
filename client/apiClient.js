@@ -6,8 +6,9 @@ export function getGreeting() {
 }
 
 export function getTennisData() {
-  return request.get('/tennis').then((res) => res.body)
-   
+  return get('/api/v1/movies'
+    .then((res) => res.json())
+    .catch((err) => console.error(err)) 
   }
 
 
