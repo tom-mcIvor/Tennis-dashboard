@@ -13,8 +13,9 @@ function Data() {
       .then((res) => {
         console.log(res);
 
+        console.log(res.results[0].entity.country.name);
+
         setActivities(res)
-        console.log(res)
 
       })
       .catch((err) => {
@@ -22,10 +23,15 @@ function Data() {
       })
   }, [])
 
+  const a = JSON.stringify(activities)
+
   return (
 
     <>
-      <h2>{JSON.stringify(activities)}</h2>
+
+
+
+      <h2>{a}</h2>
 
     </>
 
