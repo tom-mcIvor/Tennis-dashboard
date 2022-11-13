@@ -3,7 +3,6 @@ import { getGreeting } from '../apiClient'
 
 import Header from "./Header";
 import Footer from "./Footer";
-import Data from "./Tennisdata";
 
 const App = () => {
   const [greeting, setGreeting] = useState('')
