@@ -5,3 +5,5 @@ export function fetchSubreddit(subreddit) {
       .get(`/api/v1/reddit/subreddit/${subreddit}`)
       .then(res => res.body)
 }
+
+
