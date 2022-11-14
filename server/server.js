@@ -1,8 +1,11 @@
 const path = require('path')
 const express = require('express')
 const cors = require('cors')
+const fetch = require('node-fetch')
 
+require('dotenv').config()
 
+const apiKey = process.env.TMDB_API_KEY
 
 const server = express()
 
@@ -16,6 +19,26 @@ server.get('/greeting', (req, res) => {
   res.json({ greeting: greetings[index] })
 })
 
+
+server.get('/tennis', (req, res) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': apiKey,
+      'X-RapidAPI-Host': 'tennisapi1.p.rapidapi.com'
+    }
+  }
+  return fetch('https://tennisapi1.p.rapidapi.com/api/tennis/search/murray', options)
+    .then((result) => {
+      return result.json()
+    })
+    .then((data) => {
+      console.log(data)
+      return res.json(data)
+    })
+    .catch((err) => console.error(err)) 
+})
+
+
+
 module.exports = server
-
-
