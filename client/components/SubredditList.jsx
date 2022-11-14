@@ -13,7 +13,7 @@ function Subreddit() {
   return (
     <div>
       {subreddits.map((post, i) => (
-        <Post key={i} title={post.title} date={post.created} />
+        <Post key={i} title={post.title} date={post.created} url = {post.url} />
       ))}
     </div>
   )

@@ -1,13 +1,16 @@
 import React from 'react'
 
-function Post({ title, date }) {
+function Post({ title, date, url }) {
 
  let thisdate = new Date(date * 1000).toLocaleString()
 
   return (
     <>
-  <div>{title}</div>
+    <a href= {url} >
+        <div>{title}</div>
+  </a>
   <div >{thisdate}</div>
+  
   </>
   )
 }
