@@ -5,6 +5,7 @@ import Post from './Post'
 
 function Subreddit() {
   const subreddits = useSelector((state) => state.subreddits)
+  console.log(subreddits[0]);
   return (
     <div>
       {subreddits.map((post, i) => (
