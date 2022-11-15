@@ -45,7 +45,7 @@ const [formData, setFormData] = useState({
           Fetch Player
         </button>
       </form>
-      {Object.keys(tennis).length != 0 && tennis.results[0].score}
+      {Object.keys(tennis).length != 0 && tennis.results[0].entity.ranking}
     </div>
   )
 }
