@@ -39,8 +39,6 @@ function Data() {
   return (
 
     <>
-
-
       <h2>Top 100 players</h2>
 
       <label htmlFor="cars">Choose a player : </label>
@@ -51,10 +49,6 @@ function Data() {
         <option value="mercedes">Mercedes</option>
         <option value="audi">Audi</option>
       </select>
-
-        
-
-
 
       <h1>
         <p>
