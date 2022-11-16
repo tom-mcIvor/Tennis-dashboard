@@ -1,13 +1,10 @@
-*{
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
+.error {
+  color: red;
+  font-weight: bold;
 }
 
-
-Header{
-  opacity: .7;
-}
-
-Footer{
-  opacity: .7;
+.wait-indicator {
+  position: absolute;
+  margin-left: 5px;
+  width: 20px;
 }

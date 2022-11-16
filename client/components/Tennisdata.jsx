@@ -39,14 +39,11 @@ function Data() {
 
     <>
 
-<<<<<<< HEAD
-=======
       <h1>
         <p>
           {b}
         </p>
       </h1>
->>>>>>> fc4b43658b97503ab161e02d331ccae89b100fad
 
       <h2>{a}</h2>
 
