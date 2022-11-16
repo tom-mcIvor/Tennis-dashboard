@@ -8,6 +8,8 @@ import { fetchPlayer } from '../actions'
 function LoadSubreddit() {
   const tennis = useSelector((state) => state.tennis)
 
+  console.log(tennis);
+
   const dispatch = useDispatch()
 
 const [formData, setFormData] = useState({

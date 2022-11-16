@@ -6,4 +6,10 @@ export function fetchtennisplayer(playername) {
       .then(res => res.body)
 }
 
+// export function fetchtennisplayer(playername) {
+//   return request
+//       .get(`/api/v1/tennis/${playername}`)
+//       .then(res => res.body)
+// }
+
 

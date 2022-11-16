@@ -31,6 +31,29 @@ router.get('/:playername', (req, res) => {
     .catch((err) => console.error(err)) 
 })
 
+router.get('/image/:id', (req, res) => {
+  
+  const playerid = req.params.id
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': apiKey,
+      'X-RapidAPI-Host': 'tennisapi1.p.rapidapi.com'
+    }
+  }
+  fetch(`https://tennisapi1.p.rapidapi.com/api/tennis/player/${playerid}/image`, options)
+	.then(response => {
+   
+      console.log(response.body)
+      res.json(response)
+      // return ( 
+      //   response.json()
+      //       )
+    })
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+})
 
 
 
