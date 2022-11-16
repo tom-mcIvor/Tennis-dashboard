@@ -27,14 +27,14 @@ const App = () => {
 
       <Header />
 
-      {count}
-      <h1>{greeting}</h1>
-      {isError && (
-        <p style={{ color: 'red' }}>
-          There was an error retrieving the greeting.
-        </p>
-      )}
-      <button onClick={() => setCount(count + 1)}>Click</button>
+
+
+
+     
+
+      <Data />
+
+      <p>hello</p>
 
 
       <Footer />

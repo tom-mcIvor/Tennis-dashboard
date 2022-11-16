@@ -6,7 +6,15 @@ export function getGreeting() {
 }
 
 export function getTennisData() {
-  return request
-    .get('https://rapidapi.com/api/tennis/search/nadal')
-    .then((res) => res.body.activity)
-}
+  return fetch('https://tennisapi1.p.rapidapi.com/api/tennis/search/murray', options)
+    .then((res) => res.json())
+    .catch((err) => console.error(err)) 
+  }
+
+
+// export function getTennisData() {
+//   return request
+//     .get('https://rapidapi.com/BettingAPI/api/tennis-odds/details')
+//     .then((res) => res.body.activity)
+// }
+

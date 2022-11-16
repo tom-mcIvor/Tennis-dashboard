@@ -7,6 +7,8 @@ function Data() {
 
   const [activities, setActivities] = useState(null)
 
+
+
   let b
 
   useEffect(() => {
@@ -15,6 +17,9 @@ function Data() {
       .then((res) => {
         console.log(res);
 
+        console.log(res.results[0].entity.country.name);
+        
+        
         console.log(res.results[0].entity.country.name);
 
         b = res.results[0].entity.country.name
@@ -28,13 +33,28 @@ function Data() {
       })
   }, [])
 
-  console.log(b);
 
-  const a = JSON.stringify(activities)
+  const a = activities
 
   return (
 
     <>
+
+
+      <h2>Top 100 players</h2>
+
+      <label htmlFor="cars">Choose a player : </label>
+
+      <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+
+        
+
+
 
       <h1>
         <p>
