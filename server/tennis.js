@@ -1,5 +1,6 @@
 
 const fetch = require('node-fetch')
+const request = require('superagent')
 const express = require('express')
 
 const router = express.Router()
@@ -14,8 +15,10 @@ router.get('/:playername', (req, res) => {
   const playername = req.params.playername
 
   const options = {
+    
     method: 'GET',
     headers: {
+      'Content-Type': 'application/json',
       'X-RapidAPI-Key': apiKey,
       'X-RapidAPI-Host': 'tennisapi1.p.rapidapi.com'
     }
@@ -32,27 +35,22 @@ router.get('/:playername', (req, res) => {
 })
 
 router.get('/image/:id', (req, res) => {
-  
   const playerid = req.params.id
 
-  const options = {
-    method: 'GET',
-    headers: {
+  request.get(`https://tennisapi1.p.rapidapi.com/api/tennis/player/${playerid}/image`)
+    .set({
       'X-RapidAPI-Key': apiKey,
       'X-RapidAPI-Host': 'tennisapi1.p.rapidapi.com'
-    }
-  }
-  fetch(`https://tennisapi1.p.rapidapi.com/api/tennis/player/${playerid}/image`, options)
-	.then(response => {
-   
-      console.log(response.body)
-      res.json(response)
-      // return ( 
-      //   response.json()
-      //       )
     })
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+    .then(response => {
+      // F4 F3 A3 43 F4
+      const buffer = new Buffer.from(response.body).toString('base64')
+      res.json(buffer)
+    })
+    .catch((err) => {
+      console.error(err)
+      res.sendStatus(500)
+    })
 })
 
 
