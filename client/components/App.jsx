@@ -1,10 +1,10 @@
 
 import React from 'react'
 
-import ErrorMessage from './ErrorMessage'
-import LoadSubreddit from './LoadSubreddit'
-import SubredditList from './SubredditList'
-import WaitIndicator from './WaitIndicator'
+// import ErrorMessage from './ErrorMessage'
+// import LoadSubreddit from './LoadSubreddit'
+// import SubredditList from './SubredditList'
+// import WaitIndicator from './WaitIndicator'
 import Tennis from './Tennis'
 import Header from './Header'
 import Footer from './Footer'
@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="app">
       <Header/>
-      <ErrorMessage />
+      {/* <ErrorMessage />
       <LoadSubreddit>
         <WaitIndicator />
       </LoadSubreddit>
-      <SubredditList />
+      <SubredditList /> */}
 
       <Tennis/>
       <Footer/>
