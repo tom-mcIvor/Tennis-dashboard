@@ -8,3 +8,17 @@
   margin-left: 5px;
   width: 20px;
 }
+
+*{
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+
+Header{
+  opacity: .7;
+}
+
+Footer{
+  opacity: .7;
+}
