@@ -8,10 +8,10 @@ import { fetchPosts } from '../actions'
 function LoadSubreddit({ children }) {
   const dispatch = useDispatch()
 
-const [formData, setFormData] = useState({
-  name: '',
-  
-})
+  const [formData, setFormData] = useState({
+    name: '',
+
+  })
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -33,7 +33,7 @@ const [formData, setFormData] = useState({
     <div>
       <form action="">
 
-      <label htmlFor="name">Name: </label>
+        <label htmlFor="name">Name: </label>
         <input
           name="name"
           onChange={handleChange}
