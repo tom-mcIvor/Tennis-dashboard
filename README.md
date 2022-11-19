@@ -1,6 +1,11 @@
 # Toms personal project
 
-To run in your local host 
+This app lets the user write a tennis players name into a form a fetches the players photo for the user.
+App consumes a tennis data api https://rapidapi.com/search/tennis
+
+
+
+### To run in your local host 
 
     clone repo
     npm i 
