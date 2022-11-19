@@ -38,6 +38,7 @@ function LoadSubreddit(props) {
 
     console.log(id)
   }
+  
   return (
     <div>
 
@@ -59,7 +60,7 @@ function LoadSubreddit(props) {
         </TextField>
 
         <Button type="submit" variant="contained">
-          Fetch Player
+          View Player
         </Button>
       </Box>
 

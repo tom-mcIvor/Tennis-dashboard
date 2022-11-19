@@ -31,14 +31,17 @@ function LoadSubreddit(props) {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault()
-    // dispatch(fetchPlayer(formData.name))
-    // const response = await fetchtennisplayer(formData.name)
+    dispatch(fetchPlayer(formData.name))
+    const response = await fetchtennisplayer(formData.name)
     const id = response.results[0].entity.id
 
     props.loadedPlayer(id)
 
     console.log(id)
   }
+
+
+
   return (
     <div>
 
@@ -54,7 +57,7 @@ function LoadSubreddit(props) {
       >
 
         <Button type="submit" variant="contained">
-          Fetch Random Player
+          view Random Top 100 Player
         </Button>
       </Box>
 
