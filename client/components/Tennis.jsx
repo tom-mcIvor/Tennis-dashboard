@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Button from '@mui/material/Button';
 
+import TextField from '@mui/material/TextField';
+
 import { /* useDispatch ,*/ useSelector } from 'react-redux'
 
 // import { fetchPlayer } from '../actions'
@@ -36,20 +38,21 @@ function LoadSubreddit(props) {
   }
   return (
     <div>
-      <GridFilterForm onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
 
-        <label htmlFor="name">Name: </label>
-        <input
+        <TextField id="outlined-basic" label="PlayerName:" variant="outlined"
           name="name"
           onChange={handleChange}
           value={formData.name}
-        ></input>
+        >
+
+        </TextField>
 
         <Button type="submit" variant="contained">
           Fetch Player
         </Button>
 
-      </GridFilterForm>
+      </form>
       {Object.keys(tennis).length != 0 && tennis.results[0].entity.id}
     </div>
   )
