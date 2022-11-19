@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import Button from '@mui/material/Button';
 
-import { useDispatch, useSelector } from 'react-redux'
+import { /* useDispatch ,*/ useSelector } from 'react-redux'
 
-import { fetchPlayer } from '../actions'
+// import { fetchPlayer } from '../actions'
 
-import { fetchtennisplayer, fetchTennisImage } from '../apis/tennis'
+import { fetchtennisplayer/* , fetchTennisImage */ } from '../apis/tennis'
 
 function LoadSubreddit(props) {
   const tennis = useSelector((state) => state.tennis)
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
     name: '',
