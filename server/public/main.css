@@ -11,7 +11,7 @@
 
 *{
   font-family: 'Nunito', sans-serif;
-  text-align: center;
+  /* text-align: center; */
 }
 
 
@@ -21,4 +21,8 @@ Header{
 
 Footer{
   opacity: .7;
+}
+
+body{
+  text-align: center;
 }
