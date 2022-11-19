@@ -36,7 +36,7 @@ function LoadSubreddit(props) {
   }
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <GridFilterForm onSubmit={handleSubmit}>
 
         <label htmlFor="name">Name: </label>
         <input
@@ -49,7 +49,7 @@ function LoadSubreddit(props) {
           Fetch Player
         </Button>
 
-      </form>
+      </GridFilterForm>
       {Object.keys(tennis).length != 0 && tennis.results[0].entity.id}
     </div>
   )
