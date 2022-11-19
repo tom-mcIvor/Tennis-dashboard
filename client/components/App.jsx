@@ -5,33 +5,36 @@ import React, { useState, useEffect } from 'react'
 // import LoadSubreddit from './LoadSubreddit'
 // import SubredditList from './SubredditList'
 // import WaitIndicator from './WaitIndicator'
-import { fetchTennisImage } from '../apis/tennis'
+import { fetchTennisImage, fetchTennisImageByPlayer } from '../apis/tennis'
 import Tennis from './Tennis'
 import Header from './Header'
 import Footer from './Footer'
 
 function App() {
   const [image, setImage] = useState('')
-  useEffect(() => { 
-    fetchTennisImage(14486).then((url) => {
-      setImage(url)
-    })
-    .catch((err) => {
-      console.error(err)
-    })
+  useEffect(async () => {
+    const nadalImage = await fetchTennisImageByPlayer("Nadal")
+    setImage(nadalImage)
   }, [])
+
+  const loadedPlayer = async (playerId)=>{
+    const image = await fetchTennisImage(playerId)
+    setImage(image)
+  }
+
   return (
+    
     <div className="app">
-      <Header/>
+      <Header />
       {/* <ErrorMessage />
       <LoadSubreddit>
         <WaitIndicator />
       </LoadSubreddit>
       <SubredditList /> */}
 
-      <Tennis/>
-      <Footer/>
-      {image && <img src={image} alt="tennis player"/>}
+      <Tennis loadedPlayer={loadedPlayer} />
+      {image && <img src={image} alt="tennis player" />}
+      <Footer />
     </div>
   )
 }

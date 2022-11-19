@@ -1,52 +1,52 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+// import React, { useState } from 'react'
+// import { useDispatch } from 'react-redux'
 
-import { fetchPosts } from '../actions'
+// import { fetchPosts } from '../actions'
 
 
 
-function LoadSubreddit({ children }) {
-  const dispatch = useDispatch()
+// function LoadSubreddit({ children }) {
+//   const dispatch = useDispatch()
 
-  const [formData, setFormData] = useState({
-    name: '',
+//   const [formData, setFormData] = useState({
+//     name: '',
 
-  })
+//   })
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({
-      ...formData,
-      [name]: value,
-    })
-  }
+//   const handleChange = (e) => {
+//     const { name, value } = e.target
+//     setFormData({
+//       ...formData,
+//       [name]: value,
+//     })
+//   }
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault()
-    dispatch(fetchPosts(formData.name))
-    setFormData({
-      name: '',
-    })
-  }
+//   const handleSubmit = (evt) => {
+//     evt.preventDefault()
+//     dispatch(fetchPosts(formData.name))
+//     setFormData({
+//       name: '',
+//     })
+//   }
 
-  return (
-    <div>
-      <form action="">
+//   return (
+//     <div>
+//       <form action="">
 
-        <label htmlFor="name">Name: </label>
-        <input
-          name="name"
-          onChange={handleChange}
-          value={formData.name}
-        ></input>
+//         <label htmlFor="name">Name: </label>
+//         <input
+//           name="name"
+//           onChange={handleChange}
+//           value={formData.name}
+//         ></input>
 
-        <button onClick={handleSubmit}>
-          Fetch Posts
-        </button>
-      </form>
-      {children}
-    </div>
-  )
-}
+//         <button onClick={handleSubmit}>
+//           Fetch Posts
+//         </button>
+//       </form>
+//       {children}
+//     </div>
+//   )
+// }
 
-export default LoadSubreddit
+// export default LoadSubreddit
