@@ -1,4 +1,3 @@
-import { fetchSubreddit } from '../apis/reddit'
 import { fetchtennisplayer } from '../apis/tennis'
 
 export const SHOW_ERROR = 'SHOW_ERROR'
@@ -28,18 +27,18 @@ export function showError(errorMessage) {
   }
 }
 
-export function fetchPosts(subreddit) {
-  return (dispatch) => {
-    dispatch(requestPosts())
-    fetchSubreddit(subreddit)
-      .then((posts) => {
-        dispatch(receivePosts(posts))
-      })
-      .catch((err) => {
-        dispatch(showError(err.message))
-      })
-  }
-}
+// export function fetchPosts(subreddit) {
+//   return (dispatch) => {
+//     dispatch(requestPosts())
+//     fetchSubreddit(subreddit)
+//       .then((posts) => {
+//         dispatch(receivePosts(posts))
+//       })
+//       .catch((err) => {
+//         dispatch(showError(err.message))
+//       })
+//   }
+// }
 
 export function requestPlayer() {
   return {
@@ -50,17 +49,16 @@ export function requestPlayer() {
 export function receivePlayer(player) {
   return {
     type: RECEIVE_PLAYER,
-    payload: player
+    payload: player,
   }
 }
-
 
 export function fetchPlayer(name) {
   return (dispatch) => {
     dispatch(requestPlayer())
     fetchtennisplayer(name)
       .then((person) => {
-        console.log(person);
+        console.log(person)
         dispatch(receivePlayer(person))
       })
       .catch((err) => {

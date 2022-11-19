@@ -4,11 +4,12 @@ import React, { useState, useEffect } from 'react'
 // import ErrorMessage from './ErrorMessage'
 // import LoadSubreddit from './LoadSubreddit'
 // import SubredditList from './SubredditList'
-// import WaitIndicator from './WaitIndicator'
+import WaitIndicator from './WaitIndicator'
 import { fetchTennisImage, fetchTennisImageByPlayer } from '../apis/tennis'
 import Tennis from './Tennis'
 import Header from './Header'
 import Footer from './Footer'
+import GetRanPlayer from './GetRanPlayer'
 
 function App() {
   const [image, setImage] = useState('')
@@ -17,23 +18,25 @@ function App() {
     setImage(nadalImage)
   }, [])
 
-  const loadedPlayer = async (playerId)=>{
+  const loadedPlayer = async (playerId) => {
     const image = await fetchTennisImage(playerId)
     setImage(image)
   }
 
   return (
-    
+
     <div className="app">
       <Header />
-      {/* <ErrorMessage />
-      <LoadSubreddit>
-        <WaitIndicator />
-      </LoadSubreddit>
-      <SubredditList /> */}
 
+
+
+      <WaitIndicator />
       <Tennis loadedPlayer={loadedPlayer} />
       {image && <img src={image} alt="tennis player" />}
+
+      <hr />
+      <GetRanPlayer />
+
       <Footer />
     </div>
   )
