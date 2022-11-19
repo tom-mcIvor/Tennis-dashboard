@@ -1,7 +1,7 @@
 # Toms personal project
 
 This app lets the user write a tennis players name into a form a fetches the players photo for the user.
-App consumes a tennis data api https://rapidapi.com/search/tennis
+App consumes the tennis data api: https://rapidapi.com/search/tennis
 
 
 
