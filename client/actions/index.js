@@ -60,6 +60,7 @@ export function fetchPlayer(name) {
     dispatch(requestPlayer())
     fetchtennisplayer(name)
       .then((person) => {
+        console.log(person);
         dispatch(receivePlayer(person))
       })
       .catch((err) => {

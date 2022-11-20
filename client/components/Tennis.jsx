@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
+import Button from '@mui/material/Button';
 
 import { useDispatch, useSelector } from 'react-redux'
 
-
 import { fetchPlayer } from '../actions'
 
-function LoadSubreddit() {
+import { fetchtennisplayer, fetchTennisImage } from '../apis/tennis'
+
+function LoadSubreddit(props) {
   const tennis = useSelector((state) => state.tennis)
-
-  console.log(tennis);
-
   const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
@@ -25,16 +24,19 @@ function LoadSubreddit() {
     })
   }
 
-  const handleSubmit = (evt) => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault()
-    dispatch(fetchPlayer(formData.name))
-    setFormData({
-      name: '',
-    })
+    // dispatch(fetchPlayer(formData.name))
+    const response = await fetchtennisplayer(formData.name)
+    const id = response.results[0].entity.id
+
+    props.loadedPlayer(id)
+
+    console.log(id)
   }
   return (
     <div>
-      <form action="">
+      <form onSubmit={handleSubmit}>
 
         <label htmlFor="name">Name: </label>
         <input
@@ -43,13 +45,15 @@ function LoadSubreddit() {
           value={formData.name}
         ></input>
 
-        <button onClick={handleSubmit}>
+        <Button type="submit" variant="contained">
           Fetch Player
-        </button>
+        </Button>
+
       </form>
       {Object.keys(tennis).length != 0 && tennis.results[0].entity.id}
     </div>
   )
+
 }
 
 export default LoadSubreddit
