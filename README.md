@@ -39,6 +39,8 @@ npm run test
 
 [x] Fetch a random player's image
 
+[x] Display player name alongside image
+
 [ ] Display the top 20 players in a dropdown
 
 [ ] (Stretch) Search for the player in the /tennis subreddit and display the top 5 hot links

@@ -9,9 +9,12 @@ export function fetchRandomPlayer(fromRankings = true) {
     let isWta = Math.random() < 0.5
     return fetchRankings(isWta).then((rankedPlayers) => {
       var playerRank = randInt(1, Math.min(rankedPlayers.rankings.length, 500))
-      // The API is a bit funny here- for some reason the player id appears under `.team.id`, and
-      // not`.id` (which is some kind of ranking id)
-      return rankedPlayers.rankings[playerRank].team.id
+      // The API is a bit funny here- for some reason the player appears under `.team`
+      let entity = rankedPlayers.rankings[playerRank].team
+      return {
+        id: entity.id,
+        name: entity.name
+      }
     })
   } else {
     // Player ids seem to be "gappy"- a lot of player ids return an empty payload :(
@@ -19,7 +22,13 @@ export function fetchRandomPlayer(fromRankings = true) {
     playerId = randInt(1000, 1500)
     return request
       .get(`/api/v1/tennis/id/${playerId}`)
-      .then((res) => res.body.id)
+      .then((res) => {
+        let entity = res.body
+        return {
+          id: entity.id,
+          name: entity.name
+        }
+      })
   }
 }
 
@@ -36,7 +45,14 @@ export function fetchTennisPlayer(playername) {
   console.log(`/api/v1/tennis/${playername}`)
   return request
     .get(`/api/v1/tennis/${playername}`)
-    .then((res) => res.body.results[0].entity.id)
+    .then((res) => {
+      let entity = res.body.results[0].entity
+      return {
+        id: entity.id,
+        name: entity.name
+      }
+    }
+    )
 }
 
 export function fetchTennisImage(id) {

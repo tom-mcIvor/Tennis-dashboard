@@ -13,14 +13,18 @@ import GetRanPlayer from './GetRanPlayer'
 
 function App() {
   const [image, setImage] = useState('')
+  const [playerName, setPlayerName] = useState('')
+
   useEffect(async () => {
     const nadalImage = await fetchTennisImageByPlayer("Nadal")
     setImage(nadalImage)
+    setPlayerName("Nadal R.")
   }, [])
 
-  const loadedPlayer = async (playerId) => {
-    const image = await fetchTennisImage(playerId)
+  const loadedPlayer = async (player) => {
+    const image = await fetchTennisImage(player.id)
     setImage(image)
+    setPlayerName(player.name)
   }
 
   return (
@@ -28,12 +32,10 @@ function App() {
     <div className="app">
       <Header />
 
-
-
       <WaitIndicator />
       <Tennis loadedPlayer={loadedPlayer} />
       {image && <img src={image} alt="tennis player" />}
-
+      {playerName && <h1> <pre>{playerName} </pre> </h1>}
       <hr />
       <GetRanPlayer />
 

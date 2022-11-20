@@ -31,11 +31,11 @@ function LoadSubreddit(props) {
   const handleSubmit = async (evt) => {
     evt.preventDefault()
     // dispatch(fetchPlayer(formData.name))
-    let id = await fetchTennisPlayer(formData.name)
+    let player = await fetchTennisPlayer(formData.name)
 
-    props.loadedPlayer(id)
+    props.loadedPlayer(player)
 
-    console.log(id)
+    console.log(player)
   }
 
   return (
