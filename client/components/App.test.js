@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { screen, render } from '@testing-library/react'
-import store from 
+import { store } from '../'
 
 import App from './App'
 // import store from '../'
@@ -13,7 +13,7 @@ fetchPlayer.mockImplementation(() => () => {})
 
 test('page header includes Ginew', () => {
   render(
-    <Provider store={ store }>
+    <Provider store={store}>
       <App />
     </Provider>
   )
