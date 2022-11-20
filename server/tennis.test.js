@@ -4,3 +4,4 @@
 // import server from './server'
 
 
+test.todo('dispatches fetchPlayer action')

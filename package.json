@@ -34,6 +34,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.14",
     "@mui/styled-engine-sc": "^5.10.14",
+    "@testing-library/react": "^11.2.2",
     "express": "^4.17.2",
     "node-fetch": "^2.6.7",
     "styled-components": "^5.3.6"
@@ -76,6 +77,9 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"

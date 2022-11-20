@@ -2,4 +2,4 @@
 
 // import * as actions from '../../client/actions'
 
-
+test.todo('dispatches fetchPlayer action')

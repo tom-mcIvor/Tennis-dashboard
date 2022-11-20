@@ -36,6 +36,7 @@ function Tennis(props) {
     let player = await fetchTennisPlayer(formData.name)
 
     dispatch(fetchPlayer(formData.name))
+   
     props.loadedPlayer(player)
 
     setFormData({
