@@ -4,7 +4,6 @@ import { screen, render } from '@testing-library/react'
 import { store } from '../'
 
 import App from './App'
-// import store from '../'
 import { fetchPlayer } from '../actions'
 
 jest.mock('../actions')

@@ -76,5 +76,8 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
