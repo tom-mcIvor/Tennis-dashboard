@@ -1,3 +1,4 @@
+
 # Tom's personal project
 
 This app lets the user write a tennis players name into a form a fetches the player's photo for the user.
@@ -60,3 +61,23 @@ Dev:
 * nodemon
 * Github actions
 * eslint, prettier
+
+# Toms personal project
+
+This app lets the user write a tennis players name into a form a fetches the players photo for the user.
+App consumes the tennis data api: https://rapidapi.com/search/tennis
+
+
+###
+To see app in action go to dokku.toms-personal.project.devacademy.nz
+
+
+### To run in your local host 
+
+    clone repo
+    npm i 
+    create .env file in main directory 
+    go to api and get an api key then copy the api key into the .env file 
+    npm run dev 
+    now you can view my app in your local host 
+
