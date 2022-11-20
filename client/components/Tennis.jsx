@@ -9,7 +9,7 @@ import {  useDispatch , useSelector } from 'react-redux'
 
 import { fetchPlayer } from '../actions'
 
-import { fetchTennisPlayer/* , fetchTennisImage */ } from '../apis/tennis'
+import { fetchTennisPlayer , fetchttennispplayer  } from '../apis/tennis'
 
 function Tennis(props) {
 
@@ -65,7 +65,7 @@ function Tennis(props) {
         </Button>
       </Box>
 
-      {/* {Object.keys(tennis).length != 0 && tennis.results[0].entity.id} */}
+      {Object.keys(tennis).length != 0 && tennis.results[0].entity.id}
     </div>
   )
 

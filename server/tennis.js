@@ -20,8 +20,7 @@ router.get('/:playername', (req, res) => {
     },
   }
   return fetch(
-    `https://tennisapi1.p.rapidapi.com/api/tennis/search/${playername}`,
-    options
+    `https://tennisapi1.p.rapidapi.com/api/tennis/search/${playername}`, options
   )
     .then((result) => {
       return result.json()

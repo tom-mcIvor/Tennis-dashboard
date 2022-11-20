@@ -68,8 +68,8 @@ export async function fetchTennisImageByPlayer(playerName) {
   return image
 }
 
-// export function fetchTennisPlayer(playername) {
-//   return request
-//       .get(`/api/v1/tennis/${playername}`)
-//       .then(res => res.body)
-// }
+export function fetchttennispplayer(playername) {
+  return request
+      .get(`/api/v1/tennis/${playername}`)
+      .then(res => res.body)
+}
