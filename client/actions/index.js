@@ -7,6 +7,7 @@ export const SHOW_ERROR = 'SHOW_ERROR'
 export const RECEIVE_PLAYER = 'RECEIVE_PLAYER'
 export const REQUEST_PLAYER = 'REQUEST_PLAYER'
 
+export const SET_PLAYER = 'SET_PLAYER'
 // export function requestPosts() {
 //   return {
 //     type: REQUEST_POSTS,
@@ -64,5 +65,12 @@ export function fetchPlayer(name) {
       .catch((err) => {
         dispatch(showError(err.message))
       })
+  }
+}
+
+export function setPlayer(image){
+  return {
+    type: SET_PLAYER,
+    payload: image
   }
 }

@@ -1,5 +1,5 @@
-
 import React, { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 // import ErrorMessage from './ErrorMessage'
 // import LoadSubreddit from './LoadSubreddit'
@@ -13,29 +13,44 @@ import Footer from './Footer'
 
 function App() {
   const [image, setImage] = useState('')
-  const [playerName, setPlayerName] = useState('')
+  const tennis = useSelector((state) => state.tennis)
+  console.log(tennis)
 
-  useEffect(async () => {
-    const nadalImage = await fetchTennisImageByPlayer("Nadal")
-    setImage(nadalImage)
-    setPlayerName("Nadal R.")
-  }, [])
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     // const nadalImage = await fetchTennisImageByPlayer('Nadal')
+  //     // setImage(nadalImage)
+  //     // setPlayerName('Nadal R.')
+  //     loadPlayerImage(tennis.id)
+  //   }
 
-  const loadedPlayer = async (player) => {
-    const image = await fetchTennisImage(player.id)
+  //   fetchData()
+  // }, [])
+
+  // const loadedPlayer = async (player) => {
+  //   const image = await fetchTennisImage(player.id)
+  //   setImage(image)
+  //   setPlayerName(player.name)
+  // }
+
+  const loadPlayerImage = async (playerId) => {
+    const image = await fetchTennisImage(playerId)
     setImage(image)
-    setPlayerName(player.name)
   }
 
-  return (
+  loadPlayerImage(tennis.id)
 
+  return (
     <div className="app">
       <Header />
 
       <WaitIndicator />
-      <Tennis loadedPlayer={loadedPlayer} />
-      {image && <img src={image} alt="tennis player" />}
-      {playerName && <h1> <pre>{playerName} </pre> </h1>}
+      <Tennis />
+      <img src={image} alt="tennis player" />
+      <h1>
+        {' '}
+        <pre>{tennis.name} </pre>{' '}
+      </h1>
       <hr />
       {/* <GetRanPlayer /> */}
 
