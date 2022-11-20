@@ -26,3 +26,10 @@ Footer{
 body{
   text-align: center;
 }
+
+#app > div > div:nth-child(3){
+  position: absolute;
+  bottom: 10%;
+
+  opacity: .5;
+}
