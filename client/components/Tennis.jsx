@@ -65,7 +65,7 @@ function Tennis(props) {
         </Button>
       </Box>
 
-      {Object.keys(tennis).length != 0 && tennis.results[0].entity.id}
+      {/* {Object.keys(tennis).length != 0 && tennis.results[0].entity.id} */}
     </div>
   )
 
