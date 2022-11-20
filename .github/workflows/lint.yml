@@ -33,3 +33,6 @@ jobs:
         with:
           eslint: false
           prettier: false
+
+      - name: Run unit tests
+        run: npm run test
