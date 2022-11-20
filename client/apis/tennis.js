@@ -13,22 +13,20 @@ export function fetchRandomPlayer(fromRankings = true) {
       let entity = rankedPlayers.rankings[playerRank].team
       return {
         id: entity.id,
-        name: entity.name
+        name: entity.name,
       }
     })
   } else {
     // Player ids seem to be "gappy"- a lot of player ids return an empty payload :(
     let playerId
     playerId = randInt(1000, 1500)
-    return request
-      .get(`/api/v1/tennis/id/${playerId}`)
-      .then((res) => {
-        let entity = res.body
-        return {
-          id: entity.id,
-          name: entity.name
-        }
-      })
+    return request.get(`/api/v1/tennis/id/${playerId}`).then((res) => {
+      let entity = res.body
+      return {
+        id: entity.id,
+        name: entity.name,
+      }
+    })
   }
 }
 
@@ -43,16 +41,14 @@ export function fetchTennisPlayer(playername) {
     return fetchRandomPlayer()
   }
   console.log(`/api/v1/tennis/${playername}`)
-  return request
-    .get(`/api/v1/tennis/${playername}`)
-    .then((res) => {
-      let entity = res.body.results[0].entity
-      return {
-        id: entity.id,
-        name: entity.name
-      }
+  // Search for the player and return the first entry
+  return request.get(`/api/v1/tennis/${playername}`).then((res) => {
+    let entity = res.body.results[0].entity
+    return {
+      id: entity.id,
+      name: entity.name,
     }
-    )
+  })
 }
 
 export function fetchTennisImage(id) {

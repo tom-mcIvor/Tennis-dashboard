@@ -11,7 +11,7 @@ import { /* useDispatch ,*/ useSelector } from 'react-redux'
 
 import { fetchTennisPlayer/* , fetchTennisImage */ } from '../apis/tennis'
 
-function LoadSubreddit(props) {
+function Tennis(props) {
   const tennis = useSelector((state) => state.tennis)
   // const dispatch = useDispatch()
 
@@ -63,10 +63,10 @@ function LoadSubreddit(props) {
         </Button>
       </Box>
 
-      {Object.keys(tennis).length != 0 && tennis.results[0].entity.id}
+      {/* {Object.keys(tennis).length != 0 && tennis.results[0].entity.id} */}
     </div>
   )
 
 }
 
-export default LoadSubreddit
+export default Tennis
