@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchPlayer } from '../actions'
 
-import { fetchTennisPlayer, fetchttennispplayer } from '../apis/tennis'
+import { fetchTennisPlayer/* , fetchttennispplayer  */} from '../apis/tennis'
 
 function Tennis(props) {
 
