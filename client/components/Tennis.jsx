@@ -9,7 +9,7 @@ import { /* useDispatch ,*/ useSelector } from 'react-redux'
 
 // import { fetchPlayer } from '../actions'
 
-import { fetchtennisplayer/* , fetchTennisImage */ } from '../apis/tennis'
+import { fetchTennisPlayer/* , fetchTennisImage */ } from '../apis/tennis'
 
 function LoadSubreddit(props) {
   const tennis = useSelector((state) => state.tennis)
@@ -31,14 +31,13 @@ function LoadSubreddit(props) {
   const handleSubmit = async (evt) => {
     evt.preventDefault()
     // dispatch(fetchPlayer(formData.name))
-    const response = await fetchtennisplayer(formData.name)
-    const id = response.results[0].entity.id
+    let id = await fetchTennisPlayer(formData.name)
 
     props.loadedPlayer(id)
 
     console.log(id)
   }
-  
+
   return (
     <div>
 

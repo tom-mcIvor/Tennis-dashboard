@@ -1,4 +1,4 @@
-import { fetchtennisplayer } from '../apis/tennis'
+import { fetchTennisPlayer } from '../apis/tennis'
 
 export const SHOW_ERROR = 'SHOW_ERROR'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
@@ -56,7 +56,7 @@ export function receivePlayer(player) {
 export function fetchPlayer(name) {
   return (dispatch) => {
     dispatch(requestPlayer())
-    fetchtennisplayer(name)
+    fetchTennisPlayer(name)
       .then((person) => {
         console.log(person)
         dispatch(receivePlayer(person))
