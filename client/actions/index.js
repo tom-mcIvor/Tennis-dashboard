@@ -1,24 +1,24 @@
 import { fetchTennisPlayer } from '../apis/tennis'
 
 export const SHOW_ERROR = 'SHOW_ERROR'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const REQUEST_POSTS = 'REQUEST_POSTS'
+// export const RECEIVE_POSTS = 'RECEIVE_POSTS'
+// export const REQUEST_POSTS = 'REQUEST_POSTS'
 
 export const RECEIVE_PLAYER = 'RECEIVE_PLAYER'
 export const REQUEST_PLAYER = 'REQUEST_PLAYER'
 
-export function requestPosts() {
-  return {
-    type: REQUEST_POSTS,
-  }
-}
+// export function requestPosts() {
+//   return {
+//     type: REQUEST_POSTS,
+//   }
+// }
 
-export function receivePosts(posts) {
-  return {
-    type: RECEIVE_POSTS,
-    payload: posts.map((post) => post.data),
-  }
-}
+// export function receivePosts(posts) {
+//   return {
+//     type: RECEIVE_POSTS,
+//     payload: posts.map((post) => post.data),
+//   }
+// }
 
 export function showError(errorMessage) {
   return {

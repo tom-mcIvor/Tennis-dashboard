@@ -5,15 +5,17 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-import { /* useDispatch ,*/ useSelector } from 'react-redux'
+import {  useDispatch , useSelector } from 'react-redux'
 
-// import { fetchPlayer } from '../actions'
+import { fetchPlayer } from '../actions'
 
 import { fetchTennisPlayer/* , fetchTennisImage */ } from '../apis/tennis'
 
 function Tennis(props) {
+
+
   const tennis = useSelector((state) => state.tennis)
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const [formData, setFormData] = useState({
     name: '',
@@ -30,7 +32,7 @@ function Tennis(props) {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault()
-    // dispatch(fetchPlayer(formData.name))
+    dispatch(fetchPlayer(formData.name))
     let player = await fetchTennisPlayer(formData.name)
 
     props.loadedPlayer(player)
@@ -63,7 +65,7 @@ function Tennis(props) {
         </Button>
       </Box>
 
-      {/* {Object.keys(tennis).length != 0 && tennis.results[0].entity.id} */}
+      {Object.keys(tennis).length != 0 && tennis.results[0].entity.id}
     </div>
   )
 

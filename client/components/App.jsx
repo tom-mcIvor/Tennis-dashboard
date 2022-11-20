@@ -9,7 +9,7 @@ import { fetchTennisImage, fetchTennisImageByPlayer } from '../apis/tennis'
 import Tennis from './Tennis'
 import Header from './Header'
 import Footer from './Footer'
-import GetRanPlayer from './GetRanPlayer'
+// import GetRanPlayer from './GetRanPlayer'
 
 function App() {
   const [image, setImage] = useState('')
@@ -37,7 +37,7 @@ function App() {
       {image && <img src={image} alt="tennis player" />}
       {playerName && <h1> <pre>{playerName} </pre> </h1>}
       <hr />
-      <GetRanPlayer />
+      {/* <GetRanPlayer /> */}
 
       <Footer />
     </div>
