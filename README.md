@@ -81,4 +81,3 @@ To see app in action go to dokku.toms-personal.project.devacademy.nz
     npm run dev 
     now you can view my app in your local host 
 
-cghfgju
