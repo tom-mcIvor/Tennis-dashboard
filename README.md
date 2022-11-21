@@ -5,7 +5,7 @@ This app lets the user write a tennis players name into a form a fetches the pla
 
 App consumes from the tennis data api: https://rapidapi.com/search/tennis
 
-To see the app in action go to https://dokku.toms-personal.project.devacademy.nz
+To see the app in action go to https://tennis-dashboard.devacademy.nz
 
 ## Usage
 ### Start server locally
