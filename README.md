@@ -3,7 +3,6 @@
 
 This app lets the user write a tennis players name into a form a fetches the player's photo for the user.
 
-App consumes from the tennis data api: https://rapidapi.com/search/tennis
 
 To see the app in action go to https://tennis-dashboard.devacademy.nz
 
